@@ -11,9 +11,9 @@ const initalState = {
   }
 };
 
-export default function counter(state = initalState, action) {
+export default function ui(state = initalState, action) {
   /* 
-    if (typeof(state) === 'undefiend'){
+    if (typeof state === 'undefiend'){
         return initalState
     } 
     */

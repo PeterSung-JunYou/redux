@@ -20,7 +20,7 @@ const defaultProps = {
 class Control extends Component {
     constructor(props) {
         super(props);
-        
+        console.log('Control.js constructor')
     }
     
     render() {
@@ -34,8 +34,7 @@ class Control extends Component {
     }
 }
 
-Control.propTypes = {
-
-};
+Control.propTypes = propTypes;
+Control.defaultProps = defaultProps;
 
 export default Control;
