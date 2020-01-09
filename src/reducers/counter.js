@@ -18,12 +18,13 @@ export default function counter(state = initalState, action) {
     } 
     */
 
-    console.log(action)
+    console.log("ACTION=counter(root) when ", action.type)
     switch (action.type) {
         case types.INCREMENT:
+            console.log("ACTION=counter(IN==) when ", action.type)
             return {
                 ...state,
-                number: this.state.number + 1,
+                number: state.number + 1,
                 dumbObject: {
                     ...state.dumbObject,
                     d: 0
@@ -32,10 +33,12 @@ export default function counter(state = initalState, action) {
         //break;
 
         case types.DECREMENT:
-            return { ...state, number: this.state.number - 1 }
+            console.log("ACTION=counter(DE==) when ", action.type)
+            return { ...state, number: state.number - 1 }
         //break;
 
         default:
+            console.log("ACTION=counter(default==) when ", action.type)
             return state
         //break;
     }
