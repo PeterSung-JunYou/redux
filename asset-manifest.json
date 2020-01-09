@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/PeterSung-JunYou/redux.git/static/js/main.40a0ca6f.chunk.js",
+    "main.js.map": "/PeterSung-JunYou/redux.git/static/js/main.40a0ca6f.chunk.js.map",
+    "runtime-main.js": "/PeterSung-JunYou/redux.git/static/js/runtime-main.1a716834.js",
+    "runtime-main.js.map": "/PeterSung-JunYou/redux.git/static/js/runtime-main.1a716834.js.map",
+    "static/js/2.d1f13cd2.chunk.js": "/PeterSung-JunYou/redux.git/static/js/2.d1f13cd2.chunk.js",
+    "static/js/2.d1f13cd2.chunk.js.map": "/PeterSung-JunYou/redux.git/static/js/2.d1f13cd2.chunk.js.map",
+    "index.html": "/PeterSung-JunYou/redux.git/index.html",
+    "precache-manifest.bd0661005441768776f75c6572c604c3.js": "/PeterSung-JunYou/redux.git/precache-manifest.bd0661005441768776f75c6572c604c3.js",
+    "service-worker.js": "/PeterSung-JunYou/redux.git/service-worker.js",
+    "static/js/2.d1f13cd2.chunk.js.LICENSE": "/PeterSung-JunYou/redux.git/static/js/2.d1f13cd2.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a716834.js",
+    "static/js/2.d1f13cd2.chunk.js",
+    "static/js/main.40a0ca6f.chunk.js"
+  ]
+}
