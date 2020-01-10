@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
+    //store:PropTypes.object,
     onPlus: PropTypes.func,
     onSubtract: PropTypes.func,
-    onRandomizwColor: PropTypes.func
+    onRandomizeColor: PropTypes.func
+}
+
+const defaultProps = {
+    //store: createWarning('store'),
+    onPlus: createWarning('onPlus'),
+    onSubtract: createWarning('onSubtract'),
+    onRandomizeColor: createWarning('onRandomizeColor')
 }
 
 function createWarning(funcName) {
     return () => console.warn(funcName + 'is not defined')
-}
-
-const defaultProps = {
-    onPlus: createWarning('onPlus'),
-    onSubtract: createWarning('onSubtract'),
-    onRandomizwColor: createWarning('onRandomizwColor')
 }
 
 class Control extends Component {
@@ -28,7 +30,7 @@ class Control extends Component {
             <div>
                 <button onClick={this.props.onPlus}>+</button>
                 <button onClick={this.props.onSubtract}>-</button>
-                <button onClick={this.props.RandomizeColor}>Randomize Color</button>
+                <button onClick={this.props.onRandomizeColor}>Randomize Color</button>
             </div>
         );
     }

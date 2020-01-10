@@ -1,26 +1,83 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
+/**
+|--------------------------------------------------
+| PROJECT/src/index.js
+|--------------------------------------------------
+*/
 
-import { createStore } from "redux";
-import reducers from "./reducers";
-import * as actions from "./actions"; // action creater
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
+//import Counter from './components/Counter'
 
-console.log("REDUCERS:", reducers);
+import { Provider } from 'react-redux'   // connect() ....
 
-const store = createStore(reducers);
+import { createStore } from 'redux'
+import reducers from './reducers'
 
-console.log("GETSTATE1", store.getState());
+import * as actions from './actions' // action creater.... { type: 'SET_COLOR', color: [200,200,200] }
+// usage: actions.funcName()
+
+//import { increment, decrement, setColor } from './actions' // action creater
+// usage: funcName()
+
+const store = createStore(reducers)
+
+console.log('____getState_on_createStore____', store.getState())
+const unsubscribe = store.subscribe(() =>
+    console.log('onSubscribe: ', store.getState())
+)
+
+//store.dispatch(actions.increment())
+//store.dispatch({ type: 'SET_COLOR', color: [200, 200, 200] })
+
+//unsubscribe()
+
+//ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+    <Provider store={store} >
+        <App />
+    </Provider>,
+    document.getElementById('root')
+)
+
+/* 
+
+// 아래는 사용법에 대한 내용입니다.... 잘 알아두세요.
+
+const store = createStore(reducers)
+
+console.log('REDUCERS:', reducers)
+
+console.log('GETSTATE#########111111111111', store.getState())
+
 const unsubscribe = store.subscribe(function() {
-	console.log("state가 변경되면 Subscribe this##변경값##.", store.getState());
-});
+    console.count('Subscribe counter')
+    console.time('Subscirbe function timer')
+    console.log('log=', { a: '' })
+    console.dir({ a: '' })
+    console.log('dirOgj=', console.dir({ b: '' }))
+    console.log('log=', function() {})
+    console.log(
+        'dirFunc=',
+        console.dir(function() {})
+    )
+    console.log('state가 변경되면 Subscribe this##변경값##.', store.getState())
+    console.timeEnd('Subscirbe function timer')
+})
+const string = 'this is string'
+console.log(string)
+store.dispatch(actions.increment())
+store.dispatch(actions.increment())
+store.dispatch(actions.decrement())
+store.dispatch(actions.setColor([122, 122, 122]))
 
-store.dispatch(actions.increment());
-store.dispatch(actions.increment());
-store.dispatch(actions.decrement());
-store.dispatch(actions.setColor([ 122, 122, 122 ]));
+console.log('GETSTATE#########22222222222', store.getState())
+store.dispatch(increment())
+store.dispatch(increment())
+store.dispatch(decrement())
+store.dispatch(setColor([122, 122, 122]))
 
-unsubscribe();
-store.dispatch(actions.setColor([ 200, 200, 200 ]));
+unsubscribe()
+store.dispatch(actions.setColor([200, 200, 200])) 
 
-ReactDOM.render(<App />, document.getElementById("root"));
+*/

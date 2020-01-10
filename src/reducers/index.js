@@ -1,10 +1,16 @@
-import { combineReducers } from "redux";
-import counter from "./counter";
-import ui from "./ui";
+/**
+|--------------------------------------------------
+| PROJECT/src/reducer/index.js
+|--------------------------------------------------
+*/
+
+import { combineReducers } from 'redux'
+import counter from './counter'
+import ui from './ui'
 
 const reducers = combineReducers({
-  counter,
-  ui
-});
+    counter,
+    ui
+})
 
-export default reducers;
+export default reducers

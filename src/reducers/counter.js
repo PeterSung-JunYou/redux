@@ -17,28 +17,27 @@ export default function counter(state = initalState, action) {
         return initalState
     } 
     */
+    console.log('<==reducers.counter(state, action)==>',action.type)
+    console.dir(state)
+    console.dir(action)
 
-    console.log("ACTION=counter(root) when ", action.type)
     switch (action.type) {
         case types.INCREMENT:
-            console.log("ACTION=counter(IN==) when ", action.type)
             return {
                 ...state,
                 number: state.number + 1,
                 dumbObject: {
                     ...state.dumbObject,
-                    d: 0
+                    d: 1000000000000
                 }
             }
         //break;
 
         case types.DECREMENT:
-            console.log("ACTION=counter(DE==) when ", action.type)
             return { ...state, number: state.number - 1 }
         //break;
 
         default:
-            console.log("ACTION=counter(default==) when ", action.type)
             return state
         //break;
     }

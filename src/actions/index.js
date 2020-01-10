@@ -1,18 +1,24 @@
-import * as types from "./ActionTypes";
+/* 
+
+PROJECT/src/actions/index.js 
+
+*/
+
+import * as types from './ActionTypes'
 
 export function increment() {
-  return {
-    type: types.INCREMENT
-  };
+    return {
+        type: types.INCREMENT // 'INCREMENT'
+    }
 }
 export function decrement() {
-  return {
-    type: types.DECREMENT
-  };
+    return {
+        type: types.DECREMENT
+    }
 }
 export function setColor(color) {
-  return {
-    type: types.SET_COLOR,
-    color: color
-  };
+    return {
+        type: types.SET_COLOR,
+        color: color
+    }
 }
