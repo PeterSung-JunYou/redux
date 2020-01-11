@@ -9,25 +9,31 @@ import ReactDOM from 'react-dom'
 import App from './components/App'
 //import Counter from './components/Counter'
 
-import { Provider } from 'react-redux'   // connect() ....
+// 1. 프러바이더를 리엑트리덕스에서 불러오세요..connect() ....
+import { Provider } from 'react-redux'   
 
 import { createStore } from 'redux'
 import reducers from './reducers'
 
-import * as actions from './actions' // action creater.... { type: 'SET_COLOR', color: [200,200,200] }
+//import * as actions from './actions' // action creater.... { type: 'SET_COLOR', color: [200,200,200] }
 // usage: actions.funcName()
 
 //import { increment, decrement, setColor } from './actions' // action creater
 // usage: funcName()
 
+console.log('____index.html  index.js start____')
+console.log('____getState_befor_createStore____')
 const store = createStore(reducers)
-
 console.log('____getState_on_createStore____', store.getState())
+console.dir(store)
+
+/* 
 const unsubscribe = store.subscribe(() =>
     console.log('onSubscribe: ', store.getState())
 )
+ */
 
-//store.dispatch(actions.increment())
+ //store.dispatch(actions.increment())
 //store.dispatch({ type: 'SET_COLOR', color: [200, 200, 200] })
 
 //unsubscribe()
